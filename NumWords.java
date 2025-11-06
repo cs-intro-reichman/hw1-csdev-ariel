@@ -19,15 +19,11 @@ public class NumWords {
         }
 
         // extract digits
-        int thousands = num / 1000;
-        int hundreds = (num % 1000) / 100;
-        int tens = (num % 100) / 10;
+        int hundreds = num / 100;
+        int tens = (num / 10) % 10;
         int ones = num % 10;
 
         // print
-        if (thousands > 0) {
-            System.out.print(thousands + " thousands, "); 
-        }
         System.out.println(hundreds + " hundreds, " + tens + " tens, and " + ones + " ones.");
     }
 }
