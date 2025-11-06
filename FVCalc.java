@@ -9,11 +9,9 @@ public class FVCalc {
     // calculations
         double rate = rate_percentage / 100;
         double futureValue = currentValue * Math.pow(1 + rate ,n);
-    //round
-    futureValue = Math.round(futureValue);
 
     // print
-    System.out.println("After " + n + " years, $" + currentValue + " saved at " + rate_percentage + "% will yield $" + futureValue);
+    System.out.println("After " + n + " years, $" + currentValue + " saved at " + rate_percentage + "% will yield $" + (int)futureValue);
 
     }
 }
