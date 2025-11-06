@@ -12,6 +12,6 @@ public class Bill3 {
 double bill = Math.ceil(bill_sum / 3.0);
 
 // print the amount of shekels that each person need to pay for the bill
-System.out.println("Dear " + person3 + ", " + person2 + " and " + person1 + ": pay " + bill + " Shekels each");
+System.out.println("Dear " + person3 + ", " + person2 + ", and " + person1 + ": pay " + bill + " Shekels each");
     }
  }
