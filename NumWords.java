@@ -25,22 +25,10 @@ public class NumWords {
         int ones = num % 10;
 
         // print
-         boolean printed = false;
-         if (thousands > 0) {
-            System.out.print(thousands + " thousands");
-            printed = true;
+        if (thousands > 0) {
+            System.out.print(thousands + " thousands, "); 
         }
-        if (hundreds > 0 || printed) {
-            if (printed) System.out.print(", ");
-            System.out.print(hundreds + " hundreds");
-            printed = true; }
-            if (tens > 0 || printed) {
-                if (printed) System.out.print(", ");
-                System.out.print(tens + " tens");
-                printed = true;
-            }
-            if (printed) System.out.print(", and ");
-            System.out.println(ones + " ones.");
-        }
+        System.out.println(hundreds + " hundreds, " + tens + " tens, and " + ones + " ones.");
     }
+}
 
