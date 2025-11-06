@@ -19,22 +19,28 @@ public class NumWords {
         }
 
         // extract digits
-         while (first_digit > 0) {
-            int digit = num / first_digit;
-        
+        int thousands = num / 1000;
+        int hundreds = (num % 1000) / 100;
+        int tens = (num % 100) / 10;
+        int ones = num % 10;
+
         // print
-         if (first_digit >= 1000) {
-                System.out.println(digit + " thousands");
-            } else if (first_digit >= 100) {
-                System.out.println(digit + " hundreds");
-            } else if (first_digit >= 10) {
-                System.out.println(digit + " tens");
-            } else {
-                System.out.println(digit + " ones");
+         boolean printed = false;
+         if (thousands > 0) {
+            System.out.print(thousands + " thousands");
+            printed = true;
+        }
+        if (hundreds > 0 || printed) {
+            if (printed) System.out.print(", ");
+            System.out.print(hundreds + " hundreds");
+            printed = true; }
+            if (tens > 0 || printed) {
+                if (printed) System.out.print(", ");
+                System.out.print(tens + " tens");
+                printed = true;
             }
-            num = num % first_digit;
-            first_digit = first_digit / 10;
+            if (printed) System.out.print(", and ");
+            System.out.println(ones + " ones.");
         }
     }
-}
 
